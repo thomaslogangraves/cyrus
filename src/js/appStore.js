@@ -10,3 +10,8 @@ class Employee {
     this.stressLevel = 0
   }
 }
+
+export class EmployeeStore {
+  @observable stressLevel = 0
+  @observable productivity = 0
+}
