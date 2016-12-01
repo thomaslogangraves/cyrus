@@ -13,12 +13,16 @@ createNewEmployee(e) {
   }
 }
   render() {
-    const {teams} = this.props.store
-
+    const {teams, employees} = this.props.store
+    const empList = employees.map((employee, i) => (
+      <li key={i}> {employee.id.id} </li>
+    ))
+    console.log(empList)
     return(
       <div>
         <h1>Employees</h1>
-      <input className="addemployee" placeholder="Add employee"
+      <input className="addemployee" placeholder="Add employee" onKeyPress={this.createNewEmployee.bind(this)}/>
+      <ul> {empList} </ul>
       </div>
     )
   }

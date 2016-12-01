@@ -3,9 +3,9 @@
 import { computed, observable } from "mobx"
 
 class Employee {
-  constructor(id, teamId) {
-    this.id = {id: id, created: Data.now()}
-    this.teamId = teamId
+  constructor(id) {
+    this.id = {id: id, created: Date.now()}
+    this.teamId = null
     this.productivity = 0
     this.stressLevel = 0
   }
@@ -17,24 +17,25 @@ class Teams {
   @observable stressLevel
 
   constructor(id) {
-    this.id = {id: id, created: Data.now()}
+    this.id = {id: id, created: Date.now()}
     this.productivity = 0
     this.stressLevel = 0
   }
 }
 
 class EmployeeStore {
+ @observable employees = []
  @observable teams = []
 
-  createEmployee(teamId) {
-    this.teams.push(new Employee(teamId))
+  createEmployee(id) {
+    this.employees.push(new Employee(id))
   }
 
-  removeEmployee(id) {
+  removeEmployee(value) {
 
   }
 }
 
 var store = window.store = new EmployeeStore
 
-export default store
+export default new EmployeeStore
