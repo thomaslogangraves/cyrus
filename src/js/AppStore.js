@@ -1,4 +1,5 @@
 import { computed, observable } from "mobx"
+
 class Employee {
   @observable id
   @observable productivity
@@ -12,6 +13,14 @@ class Employee {
 }
 
 export class EmployeeStore {
-  @observable stressLevel = 0
-  @observable productivity = 0
+ @observable employees = []
+
+  createEmployee(id) {
+    this.employees.push(new Employee(id))
+  }
+
+  removeEmployee(id) {
+    
+  }
 }
+export default new EmployeeStore

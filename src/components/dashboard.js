@@ -3,7 +3,7 @@ import { observer } from "mobx-react"
 
 
 @observer
-export default class TodoList extends React.Component {
+export default class DashBoard extends React.Component {
 
 
   render() {
