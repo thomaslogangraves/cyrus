@@ -4,7 +4,7 @@
   "description": "Dev of lmbk platform.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --content-base src --inline --hot"
   },
   "author": "Thomas Graves",
   "license": "ISC",
