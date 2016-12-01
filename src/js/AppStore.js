@@ -14,11 +14,23 @@ class Employee {
   }
 }
 
+class Teams {
+  @observable id
+  @observable productivity
+  @observable stressLevel
+
+  constructor(id) {
+    this.id = {id: id, created: Data.now()}
+    this.productivity = 0
+    this.stressLevel = 0
+  }
+}
+
 class EmployeeStore {
- @observable employees = []
+ @observable teams = []
 
   createEmployee(id) {
-    this.employees.push(new Employee(id))
+    this.teams.push(new Employee(id))
   }
 
   removeEmployee(id) {
