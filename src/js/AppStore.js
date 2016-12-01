@@ -3,12 +3,9 @@
 import { computed, observable } from "mobx"
 
 class Employee {
-  @observable id
-  @observable productivity
-  @observable stressLevel
-
-  constructor(id) {
+  constructor(id, teamId) {
     this.id = {id: id, created: Data.now()}
+    this.teamId = teamId
     this.productivity = 0
     this.stressLevel = 0
   }
@@ -29,8 +26,8 @@ class Teams {
 class EmployeeStore {
  @observable teams = []
 
-  createEmployee(id) {
-    this.teams.push(new Employee(id))
+  createEmployee(teamId) {
+    this.teams.push(new Employee(teamId))
   }
 
   removeEmployee(id) {
