@@ -1,8 +1,10 @@
+'use strict';
+
 import "../css/main.css"
 import React from "react"
 import ReactDOM from "react-dom"
 import EmployeeStore from "./AppStore"
-import TodoList from "./TodoList"
+import Dashboard from "./Dashboard"
 
 const app = document.getElementById("app")
 

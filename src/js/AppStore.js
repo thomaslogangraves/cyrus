@@ -1,3 +1,5 @@
+'use strict';
+
 import { computed, observable } from "mobx"
 
 class Employee {
@@ -20,7 +22,7 @@ export class EmployeeStore {
   }
 
   removeEmployee(id) {
-    
+
   }
 }
 export default new EmployeeStore
