@@ -14,7 +14,7 @@ class Employee {
   }
 }
 
-export class EmployeeStore {
+class EmployeeStore {
  @observable employees = []
 
   createEmployee(id) {
@@ -25,4 +25,7 @@ export class EmployeeStore {
 
   }
 }
-export default new EmployeeStore
+
+var store = window.store = new EmployeeStore
+
+export default store

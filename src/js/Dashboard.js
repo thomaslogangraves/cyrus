@@ -10,8 +10,9 @@ export default class Dashboard extends React.Component {
 
 
   render() {
-    return
-    <div>
-    </div>
+    return(
+      <div><h1>Employees</h1>
+      </div>
+    )
   }
 }
